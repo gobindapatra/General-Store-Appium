@@ -2,7 +2,6 @@ package org.GeneralStore.TestCases;
 
 import java.time.Duration;
 import java.util.Set;
-
 import org.GeneralStore.TestUtils.BaseTest;
 import org.GeneralStore.pageObjects.Android.Cart;
 import org.GeneralStore.pageObjects.Android.FormPage;
@@ -16,7 +15,6 @@ import org.testng.Assert;
 import org.testng.AssertJUnit;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-
 import io.appium.java_client.AppiumBy;
 import io.appium.java_client.android.Activity;
 import io.appium.java_client.android.nativekey.AndroidKey;
@@ -25,7 +23,6 @@ import io.opentelemetry.exporter.logging.SystemOutLogRecordExporter;
 
 public class Ecommerce_TC4_Hybrid extends BaseTest
 {
-	
 	
 	public void setScreen()
 	{
@@ -50,9 +47,6 @@ public class Ecommerce_TC4_Hybrid extends BaseTest
 		productcatalog.goToCartPage();
 		Thread.sleep(5000);
 		
-	
-		
-		
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5000));
 		wait.until(ExpectedConditions.attributeContains(driver.findElement(By.id("com.androidsample.generalstore:id/toolbar_title")), "text", "Cart"));
 		
@@ -67,11 +61,6 @@ public class Ecommerce_TC4_Hybrid extends BaseTest
 		cart.acceptTerm();
 		Thread.sleep(5000);
 		cart.submitOrder();
-		
-		
-	
-		
-		
 				
 		Thread.sleep(7000);
 		//context means which window , you currently present 
